@@ -4,24 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe841f62-6da1-449d-9086-85beee6d4ea8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/PrestitoDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entities/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entities/Catalogo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entities/ElementoPrestato.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entities/Libri.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entities/Prestito.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entities/Riviste.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entities/Utente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ProgettoS3_L5/ApplicationTest.java" afterDir="false" />
+    <list default="true" id="fe841f62-6da1-449d-9086-85beee6d4ea8" name="Changes" comment="implementazione classi libri,riviste, creazioni nuove classi e dao">
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/CatalogoDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/PrestitoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/PrestitoDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/ElementoPrestato.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/ElementoPrestato.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Prestito.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Prestito.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,6 +78,19 @@
       <option name="presentableId" value="Default" />
       <updated>1711100046011</updated>
     </task>
+    <task id="LOCAL-00001" summary="implementazione classi libri,riviste, creazioni nuove classi e dao">
+      <option name="closed" value="true" />
+      <created>1711112126619</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1711112126619</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="implementazione classi libri,riviste, creazioni nuove classi e dao" />
+    <option name="LAST_COMMIT_MESSAGE" value="implementazione classi libri,riviste, creazioni nuove classi e dao" />
   </component>
 </project>

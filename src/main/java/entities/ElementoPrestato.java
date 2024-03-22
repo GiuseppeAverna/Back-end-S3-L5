@@ -1,15 +1,19 @@
 package entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class ElementoPrestato {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @ManyToOne // un elemento prestato è associato ad un utente
+    @JoinColumn(name = "utente_id")
+    private Utente utente;
+
+    @ManyToOne // l elemento prestato fa parte di piu prestiti
+    @JoinColumn(name = "elemento_prestato_id")
+    private ElementoPrestato elementoPrestato;
     private String tipo;
     private Long isbn;
     private String titolo;

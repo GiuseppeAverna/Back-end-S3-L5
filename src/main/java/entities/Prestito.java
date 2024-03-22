@@ -3,6 +3,7 @@ package entities;
 
 
 import javax.persistence.*;
+import java.time.LocalDate;
 
 @Entity
 public class Prestito {
@@ -17,10 +18,16 @@ public class Prestito {
     @ManyToOne
     @JoinColumn(name = "elemento_prestato_id")
     private ElementoPrestato elementoPrestato;
-    private Long isbn;
-    private String titolo;
 
-    public Prestito() {}
+    private LocalDate dataInizioPrestito;
+    private LocalDate dataRestituzionePrevista;
+    private LocalDate dataRestituzioneEffettiva;
+
+    // Costruttore vuoto
+    public Prestito() {
+    }
+
+    // Getters e setters per gli attributi
 
     public Long getId() {
         return id;
@@ -30,20 +37,43 @@ public class Prestito {
         this.id = id;
     }
 
-    public Long getIsbn() {
-        return isbn;
+    public ElementoPrestato getElementoPrestato() {
+        return elementoPrestato;
     }
 
-    public void setIsbn(Long isbn) {
-        this.isbn = isbn;
+    public void setElementoPrestato(ElementoPrestato elementoPrestato) {
+        this.elementoPrestato = elementoPrestato;
     }
 
-    public String getTitolo() {
-        return titolo;
+    public LocalDate getDataInizioPrestito() {
+        return dataInizioPrestito;
     }
 
-    public void setTitolo(String titolo) {
-        this.titolo = titolo;
+    public void setDataInizioPrestito(LocalDate dataInizioPrestito) {
+        this.dataInizioPrestito = dataInizioPrestito;
+        // Calcola e imposta la data di restituzione prevista a 30 giorni dalla data di inizio prestito
+        setDataRestituzionePrevistaFromInizioPrestito(dataInizioPrestito);
+    }
+
+    public LocalDate getDataRestituzionePrevista() {
+        return dataRestituzionePrevista;
+    }
+
+    public void setDataRestituzionePrevista(LocalDate dataRestituzionePrevista) {
+        this.dataRestituzionePrevista = dataRestituzionePrevista;
+    }
+
+    public LocalDate getDataRestituzioneEffettiva() {
+        return dataRestituzioneEffettiva;
+    }
+
+    public void setDataRestituzioneEffettiva(LocalDate dataRestituzioneEffettiva) {
+        this.dataRestituzioneEffettiva = dataRestituzioneEffettiva;
+    }
+
+
+    private void setDataRestituzionePrevistaFromInizioPrestito(LocalDate dataInizioPrestito) {
+        this.dataRestituzionePrevista = dataInizioPrestito.plusDays(30);
     }
 
 
@@ -51,8 +81,11 @@ public class Prestito {
     public String toString() {
         return "Prestito{" +
                 "id=" + id +
-                ", isbn=" + isbn +
-                ", titolo='" + titolo + '\'' +
+                ", utente=" + utente +
+                ", elementoPrestato=" + elementoPrestato +
+                ", dataInizioPrestito=" + dataInizioPrestito +
+                ", dataRestituzionePrevista=" + dataRestituzionePrevista +
+                ", dataRestituzioneEffettiva=" + dataRestituzioneEffettiva +
                 '}';
     }
 }

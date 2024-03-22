@@ -4,7 +4,7 @@ import entities.Prestito;
 
 
 import javax.persistence.*;
-
+import java.time.LocalDate;
 
 
 public class PrestitoDAO {
@@ -24,6 +24,9 @@ public class PrestitoDAO {
         } catch (Exception e) {
             System.out.println("Errore durante il salvataggio del prestito: " + e.getMessage());
         }
+    }
+    public LocalDate calcolaDataRestituzionePrevista(LocalDate dataInizioPrestito) {
+        return dataInizioPrestito.plusDays(30);
     }
 
     public Prestito findById(long id) {
